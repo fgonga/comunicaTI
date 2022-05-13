@@ -25,14 +25,17 @@
     "vuex": "^3.6.2",
     "vuex-router-sync": "^5.0.0",
 
-
-
-
-    "@johmun/vue-tags-input": "^2.1.0",
     "@mdi/font": "^4.5.95",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.4",
     "bootstrap-vue-treeview": "^1.0.8",
+
+
+    "@johmun/vue-tags-input": "^2.1.0",
+
+
+
+
     "c3": "^0.7.11",
     "chart.js": "^2.9.2",
     "chartist": "^0.11.4",
@@ -96,15 +99,10 @@
     "vue-loader": "^15.9.8",
     "vue-template-compiler": "^2.6.14",
     "webpack-bundle-analyzer": "^4.4.2",
-    "@vue/cli-plugin-babel": "^4.0.0",
 
-    "@vue/cli-service": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "compass-mixins": "^0.12.10",
-    "css-loader": "^3.2.0",
+    "compass-mixins": "^0.12.10"
 
-    "node-sass": "^4.13.0",
 
-    "vuetable-2": "^1.7.5"
+
   }
 }

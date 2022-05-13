@@ -87,7 +87,7 @@ $social-colors: (
   github: #333333,
   behance: #1769ff,
   dribbble: #ea4c89,
-  reddit: #ff4500 
+  reddit: #ff4500
 );
 
 ////////// SOCIAL COLORS //////////
@@ -107,9 +107,9 @@ $body-color: #a7afb7;
 ////////// FONT VARIABLES //////////
 
 ////////// SIDEBAR ////////
-$sidebar-width-lg: 258px;
-$sidebar-width-mini: 185px;
-$sidebar-width-icon: 70px;
+$sidebar-width-lg: 16.125rem;
+$sidebar-width-mini: 11.563rem;
+$sidebar-width-icon: 4.375rem;
 
 $sidebar-light-bg: $white;
 $sidebar-light-menu-color: #3e4b5b;
@@ -158,7 +158,7 @@ $sidebar-icon-only-submenu-padding: 0 0 0 1.5rem;
 
 $rtl-sidebar-submenu-padding: 0 1.5rem 0 0;
 
-$icon-only-collapse-width: 190px;
+$icon-only-collapse-width: 11.875rem;
 $icon-only-menu-bg-light: $sidebar-light-menu-hover-bg;
 $icon-only-menu-bg-dark: #1c1e2f;
 
@@ -166,7 +166,7 @@ $icon-only-menu-bg-dark: #1c1e2f;
 
 ///////// SETTINGS PANEL ////////
 
-$settings-panel-width: 300px;
+$settings-panel-width: 18.75rem;
 
 ///////// HORIZONTAL MENU /////////
 $horizontal-menu-bg : #f6f8fa;
@@ -186,15 +186,15 @@ $horizontal-full-width-menu-color: #9c9fa6;
 
 ///////// NAVBAR ////////
 
-$navbar-bg: #ffffff;	
-$navbar-height: 64px;	
-$navbar-menu-color: #111111;	
-$navbar-font-size: .875rem;	
-$navbar-icon-font-size: 1.25rem;	
-$nvabar-brand-bg: #181824; 	
-$nvabar-toggler-color: #8e94a9;	
-$nvabar-search-icon-color: #8e94a9;	
-$navbar-search-bg: #eef0fa;	
+$navbar-bg: #ffffff;
+$navbar-height: 4rem;
+$navbar-menu-color: #111111;
+$navbar-font-size: .875rem;
+$navbar-icon-font-size: 1.25rem;
+$nvabar-brand-bg: #181824;
+$nvabar-toggler-color: #8e94a9;
+$nvabar-search-icon-color: #8e94a9;
+$navbar-search-bg: #eef0fa;
 $nav-dropdown-color: #111111;
 
 ///////// NAVBAR ////////
@@ -203,7 +203,7 @@ $nav-dropdown-color: #111111;
 
 ///////// BUTTONS ////////
 
-$button-fixed-width: 150px;
+$button-fixed-width: 9.375rem;
 $btn-padding-y: .775rem;
 $btn-padding-x: .75rem;
 $btn-line-height: 1;
@@ -235,9 +235,9 @@ $btn-border-radius-lg: .1875rem;
 ////////// TOOLTIP VARIABLES //////////
 
 //default styles
-$tooltip-font-size: .75rem;	
-$tooltip-padding-y: .4rem;	
-$tooltip-padding-x: .75rem;	
+$tooltip-font-size: .75rem;
+$tooltip-padding-y: .4rem;
+$tooltip-padding-x: .75rem;
 $tooltip-border-radius: .375rem;
 
 ////////// TOOLTIP VARIABLES //////////
@@ -247,7 +247,7 @@ $tooltip-border-radius: .375rem;
 /////////  FORMS /////////
 
 $input-bg: color(white);
-$input-border-radius: 2px;
+$input-border-radius: 0.125rem;
 $input-placeholder-color: #181824;
 $input-font-size: .8125rem;
 
@@ -276,7 +276,7 @@ $dropdown-border-color: $border-color;
 $dropdown-divider-bg: $border-color;
 $dropdown-link-color: $body-color;
 $dropdown-header-color: $body-color;
-$dropdown-menu-box-shadow: 0px 1px 15px 1px rgba(230, 234, 236, 0.35);
+$dropdown-menu-box-shadow: 0rem 0.063rem 0.938rem 0.063rem rgba(230, 234, 236, 0.35);
 ////////  DROPDOWNS ///////
 
 //////// TABLES ////////
@@ -295,14 +295,14 @@ $table-inverse-color: color(white);
 
 ////////// MEASUREMENT AND PROPERTY VARIABLES //////////
 
-$boxed-container-width: 1200px;
-$border-property: 1px solid $border-color;
-$card-spacing-y: 30px;
+$boxed-container-width: 75;
+$border-property: 0.063rem solid $border-color;
+$card-spacing-y: 1.875rem;
 $card-padding-y: 2.5rem;
 $card-padding-x: 2.5rem;
 $card-border-radius: .3125rem;
 $card-description-color: #76838f;
-$grid-gutter-width: 18px;	
+$grid-gutter-width: 1.125rem;
 $action-transition-duration: 0.25s;
 $action-transition-timing-function: ease;
 ////////// OTHER VARIABLES //////////
@@ -327,7 +327,7 @@ $breadcrumb-divider: "/";
 $breadcrumb-custom-padding-y: 0;
 $breadcrumb-custom-padding-x: 0;
 $breadcrumb-custom-item-padding-y: 0.56rem;
-$breadcrumb-custom-item-padding-x: 10px;
+$breadcrumb-custom-item-padding-x: 0.625rem;
 $breadcrumb-custom-item-color: $black;
 $breadcrumb-item-bg: #dbe3e6;
 
@@ -337,13 +337,13 @@ $breadcrumb-item-bg: #dbe3e6;
 
 ////////// MODALS VARIABLES //////////
 
-$modal-inner-padding:               15px;
-$modal-dialog-margin:               10px;
-$modal-dialog-margin-y-sm-up:       30px;
+$modal-inner-padding:               0.938rem;
+$modal-dialog-margin:               0.625rem;
+$modal-dialog-margin-y-sm-up:       1.875rem;
 $modal-title-line-height:           $line-height-base;
 $modal-content-bg:                  $content-bg;
-$modal-content-box-shadow-xs:       0 3px 9px rgba($black,.5);
-$modal-content-box-shadow-sm-up:    0 5px 15px rgba($black,.5);
+$modal-content-box-shadow-xs:       0 0.188rem 0.563rem rgba($black,.5);
+$modal-content-box-shadow-sm-up:    0 0.313rem 0.938rem rgba($black,.5);
 
 $modal-backdrop-bg: $black;
 $modal-backdrop-opacity: .5;
@@ -356,18 +356,18 @@ $modal-header-border-width: $border-width;
 $modal-content-border-width: $border-width;
 $modal-footer-border-width: $border-width;
 
-$modal-header-padding-x: 26px;
-$modal-header-padding-y: 25px;
+$modal-header-padding-x: 1.625rem;
+$modal-header-padding-y: 1.563rem;
 
-$modal-body-padding-x: 26px;
-$modal-body-padding-y: 35px;
+$modal-body-padding-x: 1.625rem;
+$modal-body-padding-y: 2.188rem;
 
-$modal-footer-padding-x: 31px;
-$modal-footer-padding-y: 15px;
+$modal-footer-padding-x: 1.938rem;
+$modal-footer-padding-y: 0.938rem;
 
 $modal-lg: 90%;
-$modal-md: 500px;
-$modal-sm: 300px;
+$modal-md: 31.25rem;
+$modal-sm: 18.75rem;
 $modal-transition: transform .4s ease;
 
 ////////// MODALS VARIABLES //////////
@@ -403,11 +403,11 @@ $circle-img-border: $white;
 $circle-border:$white;
 
 $text-gray:gray;
-////////   MISC  //////////////	
-$page-title-color: #111;	
-////////   MISC  //////////////	
-$card-mixed-danger :linear-gradient(to bottom, #d41459 , #911a6c);	
-////////   CHAT  //////////////	
-$chat-container-height:950px;	
-////////   CHAT  //////////////	
+////////   MISC  //////////////
+$page-title-color: #111;
+////////   MISC  //////////////
+$card-mixed-danger :linear-gradient(to bottom, #d41459 , #911a6c);
+////////   CHAT  //////////////
+$chat-container-height:59.375rem;
+////////   CHAT  //////////////
 $bullet-line-list-shape-bg: color(white) !default;

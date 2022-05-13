@@ -7,12 +7,6 @@
 
 
 
-@import 'elements/card';
-@import 'elements/navbar';
-@import 'elements/buttons';
-@import 'elements/transitions';
-
-
 
 /*-------------------------------------------------------------------*/
 /* === Import Bootstrap functions and variables === */
@@ -25,8 +19,8 @@
 
 /*-------------------------------------------------------------------*/
 /* === SCSS Compass Functions === */
-@import "compass-mixins/lib/compass";
-@import "compass-mixins/lib/animate";
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/animate";
 
 /*-------------------------------------------------------------------*/
 /* === Boostrap Main SCSS === */
@@ -96,5 +90,3 @@
 
 
 
-@import '~sweetalert2/dist/sweetalert2';
-@import 'components/server-error';
