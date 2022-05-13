@@ -5,11 +5,25 @@ namespace App\Models;
 use App\Notifications\ResetPassword;
 use App\Notifications\VerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-
+/**
+ * @property integer $id
+ * @property integer $tenant_id
+ * @property string $name
+ * @property string $email
+ * @property string $email_verified_at
+ * @property string $password
+ * @property string $remember_token
+ * @property string $created_at
+ * @property string $updated_at
+ * @property Tenant $tenant
+ * @property OauthProvider[] $oauthProviders
+ */
 class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
 {
     use Notifiable,
@@ -24,6 +38,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
         'name',
         'email',
         'password',
+        'tenant_id'
     ];
 
     /**
@@ -53,13 +68,19 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     protected $appends = [
         'photo_url',
     ];
-
+    /**
+     * @return BelongsTo
+     */
+    public function tenant(): BelongsTo
+    {
+        return $this->belongsTo(Tenant::class);
+    }
     /**
      * Get the profile photo URL attribute.
      *
      * @return string
      */
-    public function getPhotoUrlAttribute()
+    public function getPhotoUrlAttribute(): string
     {
         return vsprintf('https://www.gravatar.com/avatar/%s.jpg?s=200&d=%s', [
             md5(strtolower($this->email)),
@@ -70,9 +91,9 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     /**
      * Get the oauth providers.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
-    public function oauthProviders()
+    public function oauthProviders(): HasMany
     {
         return $this->hasMany(OAuthProvider::class);
     }

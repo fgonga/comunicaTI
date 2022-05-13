@@ -8,6 +8,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use function PHPUnit\Framework\isNull;
 
 class RegisterController extends Controller
 {
@@ -20,6 +21,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
+
 
     /**
      * The user has been registered.

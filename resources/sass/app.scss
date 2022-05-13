@@ -1,12 +1,100 @@
-@import 'variables';
+/*------------------------------------------------------------------
+ [Master Stylesheet]
 
-@import '~bootstrap/scss/bootstrap';
-@import '~sweetalert2/dist/sweetalert2';
-@import '~@fortawesome/fontawesome-svg-core/styles';
+  Project:	Star Admin Bootstrap Template [Pro Version]
+  Version:	1.0
+-------------------------------------------------------------------*/
+
+
 
 @import 'elements/card';
 @import 'elements/navbar';
 @import 'elements/buttons';
 @import 'elements/transitions';
 
+
+
+/*-------------------------------------------------------------------*/
+/* === Import Bootstrap functions and variables === */
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+/*-------------------------------------------------------------------*/
+/* === Import template variables === */
+@import "variables";
+
+/*-------------------------------------------------------------------*/
+/* === SCSS Compass Functions === */
+@import "compass-mixins/lib/compass";
+@import "compass-mixins/lib/animate";
+
+/*-------------------------------------------------------------------*/
+/* === Boostrap Main SCSS === */
+@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap-vue/src/index.scss';
+
+@import "~vue2-datepicker/scss/index";
+
+/*-------------------------------------------------------------------*/
+/* === Template mixins === */
+@import "mixins/animation";
+@import "mixins/background";
+@import "mixins/blockqoute";
+@import "mixins/breadcrumbs";
+@import "mixins/buttons";
+@import "mixins/cards";
+@import "mixins/misc";
+@import "mixins/text";
+@import "mixins/tabs";
+
+/*-------------------------------------------------------------------*/
+/* === Core Styles === */
+@import "reset";
+@import "fonts";
+@import "functions";
+@import "sidebar";
+@import "navbar";
+@import "typography";
+@import "misc";
+@import "footer";
+@import "utilities";
+@import "background";
+@import "demo";
+
+/*-------------------------------------------------------------------*/
+/* === Components === */
+@import "components/bootstrap-progress";
+@import "components/breadcrumbs";
+@import "components/buttons";
+@import "components/cards";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/forms";
+@import "components/icons";
+@import "components/preview";
+@import "components/tables";
+@import "components/tabs";
+@import "components/lists";
+@import "components/loaders/loaders";
+@import "components/new-account";
+@import "components/nav";
+@import "components/dashboard";
+
+/*-------------------------------------------------------------------*/
+/* === Plugin override === */
+
+/*-------------------------------------------------------------------*/
+/* === Landing screens === */
+@import "landing-screens/auth";
+@import "landing-screens/error";
+@import "landing-screens/profile-page";
+
+
+
+@import "layout";
+@import "animation";
+
+
+
+@import '~sweetalert2/dist/sweetalert2';
 @import 'components/server-error';
