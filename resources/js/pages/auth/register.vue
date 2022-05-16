@@ -9,21 +9,48 @@
         <h6 class="font-weight-light">{{$t('registar_e_facil')}}</h6>
         <form @submit.prevent="register" class="pt-3" @keydown="form.onKeydown($event)">
           <div class="form-group">
-            <!-- Adicionar uma div com margem -->
-
-            <input type="text" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control form-control-lg" id="exampleInputUsername1" :placeholder="$t('name')">
+            <input v-model="form.name" type="text"
+                   :class="{ 'is-invalid': form.errors.has('name') }"
+                   class="form-control form-control-lg"
+                   id="exampleInputUsername1"
+                   placeholder="Seu nome">
             <has-error :form="form" field="name" />
           </div>
           <div class="form-group">
-            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" :placeholder="$t('email')">
+            <input v-model="form.nome" type="text"
+                   :class="{ 'is-invalid': form.errors.has('nome') }"
+                   class="form-control form-control-lg"
+                   id="exampleInputUsername1"
+                   placeholder="Nome da empresa">
+            <has-error :form="form" field="nome" />
           </div>
           <div class="form-group">
-            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" :placeholder="$t('password')">
+            <input v-model="form.nif" type="text"
+                   :class="{ 'is-invalid': form.errors.has('nif') }"
+                   class="form-control form-control-lg"
+                   id="exampleInputUsername1"
+                    placeholder="NIF">
+            <has-error :form="form" field="nif" />
           </div>
+          <div class="form-group">
+            <input v-model="form.email" name="email" type="email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control form-control-lg" id="exampleInputEmail1" :placeholder="$t('email')">
+            <has-error :form="form" field="email" />
+          </div>
+          <div class="form-group">
+            <input v-model="form.password" name="password" type="password" class="form-control form-control-lg" :class="{ 'is-invalid': form.errors.has('password') }" id="exampleInputPassword1" :placeholder="$t('password')">
+            <has-error :form="form" field="password" />
+          </div>
+          <div class="form-group">
+            <input v-model="form.password_confirmation" name="password_confirmation" type="password" class="form-control form-control-lg" :class="{ 'is-invalid': form.errors.has('password_confirmation') }" id="exampleInputPassword1" placeholder="Confirme sua senha">
+            <has-error :form="form" field="password_confirmation" />
+          </div>
+          <v-button :loading="form.busy" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" >
+            {{ $t('register') }}
+          </v-button>
           <div class="mb-4">
             <div class="form-check">
               <label class="form-check-label text-muted">
-                <input type="checkbox" class="form-check-input">
+                <input type="checkbox" >
                 <!--    TODO Adicionar termos e condições            -->
                 Eu aceito todos os <a href="">Termos e Condições</a>
                 <i class="input-helper"></i>

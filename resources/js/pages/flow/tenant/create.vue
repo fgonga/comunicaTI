@@ -1,15 +1,16 @@
 <template>
   <div class="d-flex justify-content-center">
-    <form-wizard color="#0d6efd"  shape="tab" class="col-6" >
-      <tab-content title="Personal details">
-        My first tab content
+    <form-wizard @on-complete="novoTenante" subtitle="" color="#181824" nextButtonText="Proximo" stepSize="sm"  backButtonText="Voltar" finishButtonText="Finalizar" shape="tab" class="col-6"  title="Nova empresa" >
+      <tab-content title="Informações gerais">
+        <div class="row">
+          <div class="form-group col-12">
+            <label for="">NIF</label>
+            <input type="text" class="form-control" placeholder="Exemplo: 5000342343">
+          </div>
+        </div>
       </tab-content>
-      <tab-content title="Additional Info">
-        My second tab content
-      </tab-content>
-      <tab-content title="Last step">
-        Yuhuuu! This seems pretty damn simple
-      </tab-content>
+
+
     </form-wizard>
   </div>
 </template>
@@ -24,6 +25,11 @@ export default {
   components: {
     FormWizard,
     TabContent
+  },
+  methods:{
+    novoTenante(){
+      alert("Tenant criado com sucesso!")
+    }
   }
 }
 </script>

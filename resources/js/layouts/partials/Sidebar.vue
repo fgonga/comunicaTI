@@ -2,12 +2,15 @@
   <section class="app-sidebar">
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
-        <li class="nav-item nav-category">Main</li>
+        <li class="nav-item nav-category">{{$t('balance')}}</li>
         <li class="nav-item" v-on:click="collapseAll">
-          <router-link class="nav-link" to="/">
-            <span class="icon-bg"><i class="mdi mdi-cube menu-icon"></i></span>
-            <span class="menu-title">Dashboard</span>
-          </router-link>
+          <span ref="#"  @click="mostrarOuOcular" class="nav-link" >
+            <span class="icon-bg"><i class="mdi mdi-currency-usd menu-icon"></i></span>
+            <span class="menu-title">
+              <span v-if="mostrar">1.000.000,00 AOA</span>
+              <span v-else>************</span>
+            </span>
+          </span>
         </li>
         <li class="nav-item nav-category">UI Features</li>
         <li class="nav-item">
@@ -180,11 +183,15 @@ export default {
         { show: false },
         { show: false },
         { show: false }
-      ]
+      ],
+      mostrar: false
     }
   },
 
   methods: {
+    mostrarOuOcular(){
+      this.mostrar = !this.mostrar;
+    },
     collapseAll() {
       var exp_element = document.getElementsByClassName("show");
       if (exp_element.length > 0) {

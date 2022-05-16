@@ -57,6 +57,8 @@ class CriandoTabelas extends Migration
             $table->id();
             $table->uuid("uuid")->unique();
             $table->string("nome");
+            $table->string("nif");
+            $table->timestamps();
         });
     }
 

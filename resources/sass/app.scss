@@ -6,7 +6,7 @@
 -------------------------------------------------------------------*/
 
 
-
+@import "~@mdi/font/scss/materialdesignicons";
 
 /*-------------------------------------------------------------------*/
 /* === Import Bootstrap functions and variables === */
@@ -88,5 +88,20 @@
 @import "layout";
 @import "animation";
 
+.server-error-modal {
+  height: 100%;
+  top: 0;
+  .swal2-html-container {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+  }
+}
 
 

@@ -1,5 +1,6 @@
 {
   "ok": "Ok",
+  "balance":"Solde",
   "cancel": "Annuler",
   "error_alert_title": "Oups...",
   "error_alert_text": "Quelque chose a mal tourné ! Veuillez réessayer.",

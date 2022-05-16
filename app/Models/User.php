@@ -73,7 +73,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
      */
     public function tenant(): BelongsTo
     {
-        return $this->belongsTo(Tenant::class);
+        return $this->belongsTo(Tenant::class,"tenant_id","id");
     }
     /**
      * Get the profile photo URL attribute.

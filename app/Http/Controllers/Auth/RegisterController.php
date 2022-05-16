@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Tenant;
 use App\Models\User;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -41,6 +42,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+            'nif' => 'required|string|max:255',
+            'nome' => 'required|string|max:255',
             'name' => 'required|max:255',
             'email' => 'required|email:filter|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
@@ -52,10 +55,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data): User
     {
-        return User::create([
+        $tenant  =    Tenant::create([
+            'nome' => $data['nome'],
+            'nif' => $data['nif'],
+        ]);
+        return  $tenant->users()->create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+
     }
 }
