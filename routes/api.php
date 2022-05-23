@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\OAuthController;
@@ -10,7 +11,7 @@ use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Settings\PasswordController;
 use App\Http\Controllers\Settings\ProfileController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\TagController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -43,4 +44,12 @@ Route::group(['middleware' => 'guest:api'], function () {
 
     Route::post('oauth/{driver}', [OAuthController::class, 'redirect']);
     Route::get('oauth/{driver}/callback', [OAuthController::class, 'handleCallback'])->name('oauth.callback');
+});
+
+Route::apiResources([
+    'tag' => TagController::class,
+    'contact' => ContactController::class,
+]);
+Route::prefix('tag')->group(function () {
+    Route::get('/{id}/contacts', [TagController::class, 'contacts'])->name("tag.contacts");
 });

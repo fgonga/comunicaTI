@@ -3,6 +3,10 @@ function page (path) {
 }
 
 export default [
+
+  /*Contactos*/
+  { path: '/contacts/index', name: 'contacts.index', component: page('contacts/index.vue') },
+
   { path: '/', name: 'welcome', component: page('welcome.vue') },
 
   { path: '/login', name: 'login', component: page('auth/login.vue') },

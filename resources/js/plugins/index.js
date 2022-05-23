@@ -1,3 +1,4 @@
-import './axios'
-import './fontawesome'
-import 'bootstrap'
+import './toastr';
+import './axios';
+
+import 'bootstrap';

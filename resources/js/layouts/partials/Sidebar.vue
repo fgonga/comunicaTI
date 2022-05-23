@@ -12,162 +12,173 @@
             </span>
           </span>
         </li>
-        <li class="nav-item nav-category">UI Features</li>
         <li class="nav-item">
-          <span class="nav-link" v-b-toggle="'ui-basic'">
+          <a class="nav-link" v-b-toggle="'ui-basic'" href="http://localhost:8080">
             <span class="icon-bg"><i class="mdi mdi-crosshairs-gps menu-icon"></i></span>
-            <span class="menu-title">Basic UI Elements</span>
-            <i class="menu-arrow"></i>
-          </span>
-          <b-collapse accordion="sidebar-accordion" id="ui-basic">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/basic-ui/buttons/">Buttons</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/basic-ui/dropdowns/">Dropdowns</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/basic-ui/typography/">Typography</router-link>
-              </li>
-            </ul>
-          </b-collapse>
+            <span class="menu-title">Painel</span>
+          </a>
+        </li>
+        <li class="nav-item nav-category">Relacionamento</li>
+        <li class="nav-item">
+          <router-link :to="{name : 'contacts.index'}" class="nav-link" v-b-toggle="'ui-basic'"  >
+            <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
+            <span class="menu-title">Contactos</span>
+          </router-link>
         </li>
         <li class="nav-item">
           <span class="nav-link" v-b-toggle="'form-elements'">
-            <span class="icon-bg"><i class="mdi mdi-format-list-bulleted menu-icon"></i></span>
-            <span class="menu-title">Forms</span>
+            <span class="icon-bg"><i class="mdi mdi-message  menu-icon"></i></span>
+            <span class="menu-title">SMS</span>
             <i class="menu-arrow"></i>
           </span>
           <b-collapse accordion="sidebar-accordion" id="form-elements">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/forms/basic-elements/">Basic Elements</router-link>
+                <router-link class="nav-link" to="/forms/basic-elements/">Envio rapido</router-link>
               </li>
-            </ul>
-          </b-collapse>
-        </li>
-        <li class="nav-item">
-          <span class="nav-link" v-b-toggle="'icons-dropdown'">
-            <span class="icon-bg"><i class="mdi mdi-contacts menu-icon"></i></span>
-            <span class="menu-title">Icons</span>
-            <i class="menu-arrow"></i>
-          </span>
-          <b-collapse accordion="sidebar-accordion" id="icons-dropdown">
-            <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/icons/mdi-icons/">MDI</router-link>
+                <router-link class="nav-link" to="/forms/basic-elements/">Criar campanha</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/forms/basic-elements/">Listar campanhas</router-link>
               </li>
             </ul>
           </b-collapse>
         </li>
-        <li class="nav-item nav-category">Data Representations</li>
+        <li class="nav-item nav-category">Geral</li>
         <li class="nav-item">
           <span class="nav-link" v-b-toggle="'charts-dropdown'">
             <span class="icon-bg"><i class="mdi mdi-chart-bar menu-icon"></i></span>
-            <span class="menu-title">Charts</span>
+            <span class="menu-title">Tráfego</span>
             <i class="menu-arrow"></i>
           </span>
           <b-collapse accordion="sidebar-accordion" id="charts-dropdown">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/charts/chartjs/">Chart js</router-link>
+                <router-link class="nav-link" to="/charts/chartjs/">SMS MT (Saída)</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/charts/chartjs/">Estatisticas</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/charts/chartjs/">Monitoramento</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/charts/chartjs/">Relatórios</router-link>
               </li>
             </ul>
           </b-collapse>
         </li>
         <li class="nav-item">
           <span class="nav-link" v-b-toggle="'table-dropdown'">
-            <span class="icon-bg"><i class="mdi mdi-table-large menu-icon"></i></span>
-            <span class="menu-title">Tables</span>
+            <span class="icon-bg"><i class="mdi mdi-card-plus menu-icon"></i></span>
+            <span class="menu-title">Cobrança</span>
             <i class="menu-arrow"></i>
           </span>
           <b-collapse accordion="sidebar-accordion" id="table-dropdown">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/tables/basic-tables/">Basic Table</router-link>
-              </li>
-            </ul>
-          </b-collapse>
-        </li>
-        <li class="nav-item nav-category">Sapmle Pages</li>
-        <li class="nav-item">
-          <span class="nav-link" v-b-toggle="'user-page-dropdown'">
-            <span class="icon-bg"><i class="mdi mdi-lock menu-icon"></i></span>
-            <span class="menu-title">User Pages</span>
-            <i class="menu-arrow"></i>
-          </span>
-          <b-collapse accordion="sidebar-accordion" id="user-page-dropdown">
-            <ul class="nav flex-column sub-menu">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/auth-pages/login/">Login</router-link>
+                <router-link class="nav-link" to="/tables/basic-tables/">Comprar crédito</router-link>
               </li>
               <li class="nav-item">
-                <router-link class="nav-link" to="/auth-pages/register/">Register</router-link>
+                <router-link class="nav-link" to="/tables/basic-tables/">Pagamento automatico</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Métodos de pagamento</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Detalhes de faturamento</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Transações</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Facturas</router-link>
               </li>
             </ul>
           </b-collapse>
         </li>
         <li class="nav-item">
-          <span class="nav-link" v-b-toggle="'error-page-dropdown'">
-            <span class="icon-bg"><i class="mdi mdi-security menu-icon"></i></span>
-            <span class="menu-title">Error pages</span>
+          <span class="nav-link" v-b-toggle="'table-dropdown2'">
+            <span class="icon-bg"><i class="mdi mdi-currency-usd menu-icon"></i></span>
+            <span class="menu-title">Preço</span>
             <i class="menu-arrow"></i>
           </span>
-          <b-collapse accordion="sidebar-accordion" id="error-page-dropdown">
+          <b-collapse accordion="sidebar-accordion" id="table-dropdown2">
             <ul class="nav flex-column sub-menu">
               <li class="nav-item">
-                <router-link class="nav-link" to="/error-pages/error-404/">404</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/error-pages/error-500/">500</router-link>
+                <router-link class="nav-link" to="/tables/basic-tables/">Mensagens de texto</router-link>
               </li>
             </ul>
           </b-collapse>
         </li>
-        <li class="nav-item documentation-link" v-on:click="collapseAll">
-          <a class="nav-link" target="_blank" href="http://www.bootstrapdash.com/demo/connect-plus-free-vue/documentation/documentation.html">
-            <span class="icon-bg">
-              <i class="mdi mdi-file-document-box menu-icon"></i>
-            </span>
-            <span class="menu-title">Documentation</span>
+        <li class="nav-item">
+          <span class="nav-link" v-b-toggle="'table-dropdown3'">
+            <span class="icon-bg"><i class="mdi mdi-settings-outline menu-icon"></i></span>
+            <span class="menu-title">Definições</span>
+            <i class="menu-arrow"></i>
+          </span>
+          <b-collapse accordion="sidebar-accordion" id="table-dropdown3">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Lista de permissões de IP</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Lista de permissões de URLs</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/"> Padrões de SMS</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Otimizações de SMS</router-link>
+              </li>
+            </ul>
+          </b-collapse>
+        </li>
+        <li class="nav-item">
+          <span class="nav-link" v-b-toggle="'table-dropdown'">
+            <span class="icon-bg"><i class="mdi mdi-api menu-icon"></i></span>
+            <span class="menu-title">API</span>
+            <i class="menu-arrow"></i>
+          </span>
+          <b-collapse accordion="sidebar-accordion" id="table-dropdown">
+            <ul class="nav flex-column sub-menu">
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Chaves de API</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Crédenciais</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/tables/basic-tables/">Ganchos da Web</router-link>
+              </li>
+            </ul>
+          </b-collapse>
+        </li>
+        <li class="nav-item nav-category">Preciso de ajuda</li>
+        <li class="nav-item">
+          <a class="nav-link" v-b-toggle="'ui-basic'" href="http://localhost:8080">
+            <span class="icon-bg"><i class="mdi mdi-file-document menu-icon"></i></span>
+            <span class="menu-title">Documentação</span>
           </a>
         </li>
-        <li class="nav-item sidebar-user-actions">
-          <div class="user-details">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <div class="d-flex align-items-center">
-                  <div class="sidebar-profile-img">
-                    <img src="/images/faces/face28.png" alt="image">
-                  </div>
-                  <div class="sidebar-profile-text">
-                    <p class="mb-1">Henry Klein</p>
-                  </div>
-                </div>
-              </div>
-              <div class="badge badge-danger">3</div>
-            </div>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" v-b-toggle="'ui-basic'" href="http://localhost:8080">
+            <span class="icon-bg"><i class="mdi mdi-chat menu-icon"></i></span>
+            <span class="menu-title">Apoio suporte</span>
+          </a>
         </li>
-        <li class="nav-item sidebar-user-actions">
-          <div class="sidebar-user-menu">
-            <a href="#" class="nav-link"><i class="mdi mdi-settings menu-icon"></i>
-              <span class="menu-title">Settings</span>
-            </a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" v-b-toggle="'ui-basic'" href="http://localhost:8080">
+            <span class="icon-bg"><i class="mdi mdi-chat-alert menu-icon"></i></span>
+            <span class="menu-title">Bate papo ao vivo</span>
+          </a>
         </li>
-        <li class="nav-item sidebar-user-actions">
-          <div class="sidebar-user-menu">
-            <a href="#" class="nav-link"><i class="mdi mdi-speedometer menu-icon"></i>
-              <span class="menu-title">Take Tour</span></a>
-          </div>
-        </li>
-        <li class="nav-item sidebar-user-actions">
-          <div class="sidebar-user-menu">
-            <a href="#" class="nav-link"><i class="mdi mdi-logout menu-icon"></i>
-              <span class="menu-title">Log Out</span></a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" v-b-toggle="'ui-basic'" href="http://localhost:8080">
+            <span class="icon-bg"><i class="mdi mdi-state-machine menu-icon"></i></span>
+            <span class="menu-title">Status</span>
+          </a>
         </li>
       </ul>
     </nav>

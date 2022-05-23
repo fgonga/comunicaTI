@@ -1,0 +1,21 @@
+const provincias = [
+  'Benguela',
+  'Bengo',
+  'Bié',
+  'Cabinda',
+  'Cuando-Cubango',
+  'Cunene',
+  'Huambo',
+  'Huíla',
+  'Kwanza-Norte',
+  'Kwanza-Sul',
+  'Luanda',
+  'Lunda-Norte',
+  'Lunda-Sul',
+  'Malanje',
+  'Moxico',
+  'Namibe',
+  'Uíge',
+  'Zaire',
+];
+export default provincias;

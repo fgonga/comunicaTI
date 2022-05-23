@@ -41,7 +41,7 @@ $colors: (
 
 
 $theme-colors: (
-  primary:         #0062ff,
+  primary:         #03a10a,
   secondary:       #8e94a9,
   success:         #44ce42,
   info:            #a461d8,
@@ -386,7 +386,7 @@ $nav-pills-custom-bg: #fcfcfd;
 ////////   CALENDAR  //////////////
 $fullcalendar-color: #a8b2b9;
 ////////   CALENDAR  //////////////
-
+$input-placeholder-color: #a7afb7;
 $tab-head-bg: darken(#f2edf3, 2%);
 $accent-color: $white;
 $card-bg-varient: #fff;
@@ -411,3 +411,4 @@ $card-mixed-danger :linear-gradient(to bottom, #d41459 , #911a6c);
 $chat-container-height:59.375rem;
 ////////   CHAT  //////////////
 $bullet-line-list-shape-bg: color(white) !default;
+

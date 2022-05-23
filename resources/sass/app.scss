@@ -7,7 +7,7 @@
 
 
 @import "~@mdi/font/scss/materialdesignicons";
-
+@import "components/sweatalert2";
 /*-------------------------------------------------------------------*/
 /* === Import Bootstrap functions and variables === */
 @import "~bootstrap/scss/functions";
@@ -57,6 +57,7 @@
 
 /*-------------------------------------------------------------------*/
 /* === Components === */
+
 @import "components/bootstrap-progress";
 @import "components/breadcrumbs";
 @import "components/buttons";
@@ -73,6 +74,8 @@
 @import "components/new-account";
 @import "components/nav";
 @import "components/dashboard";
+@import "components/vue-multiselect";
+@import "components/vue-tel-input";
 
 /*-------------------------------------------------------------------*/
 /* === Plugin override === */
@@ -88,20 +91,106 @@
 @import "layout";
 @import "animation";
 
+.vue-tel-input {
+  background-image: none;
+  border: 1px solid #d8d8d8;
+  border-radius: 1px;
+  color: inherit;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.vue-tel-input.is-invalid{
+  background-image: none;
+  border: 1px solid #dc3545;
+
+}
 .server-error-modal {
-  height: 100%;
-  top: 0;
+  height: 100%!important;
+
   .swal2-html-container {
-    margin: 0;
-    overflow: hidden;
+    margin: 0!important;
+    overflow: hidden!important;
   }
 
   iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
+    width: 100%!important;
+    height: 100%!important;
+    border: none!important;
+    border-radius: 5px!important;
   }
+}
+.server-error-modal{height:100%}
+.server-error-modal .swal2-html-container{margin:0;overflow:hidden}
+.server-error-modal iframe{border:none;border-radius:5px;height:100%;width:100%}
+.swal2-container{z-index:99999999!important}
+.list-group-item.active{
+  background-color: #03a10a;
+  border-color: #03a10a;
+}
+
+.page-item.active .page-link{
+  background-color: #03a10a;
+  border-color: #03a10a;
 }
 
 
+//
+//  Sweetalert2
+//
+@import '~sweetalert2/dist/sweetalert2.min.css';
+
+.swal2-container {
+  .swal2-title{
+    font-size: 20px;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.swal2-modal{
+  font-size: 14px;
+}
+
+.swal2-icon{
+  &.swal2-question{
+    border-color: $info;
+    color: $info;
+  }
+  &.swal2-success {
+    [class^=swal2-success-line]{
+      background-color: $success;
+    }
+
+    .swal2-success-ring{
+      border-color: rgba($success, 0.3);
+    }
+  }
+  &.swal2-warning{
+    border-color: $warning;
+    color: $warning;
+  }
+}
+
+.swal2-styled{
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+.swal2-progress-steps {
+  .swal2-progress-step{
+    background: $primary;
+    &.swal2-active-progress-step{
+      background: $primary;
+      &~.swal2-progress-step, &~.swal2-progress-step-line{
+        background: rgba($primary, 0.3);
+      }
+    }
+  }
+
+  .swal2-progress-step-line{
+    background: $primary;
+  }
+}
+
+.swal2-loader{
+  border-color: $primary transparent $primary transparent;
+}

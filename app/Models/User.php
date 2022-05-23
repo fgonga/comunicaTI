@@ -122,7 +122,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     /**
      * @return int
      */
-    public function getJWTIdentifier()
+    public function getJWTIdentifier(): int
     {
         return $this->getKey();
     }
@@ -130,7 +130,7 @@ class User extends Authenticatable implements JWTSubject //, MustVerifyEmail
     /**
      * @return array
      */
-    public function getJWTCustomClaims()
+    public function getJWTCustomClaims(): array
     {
         return [];
     }

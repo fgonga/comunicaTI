@@ -1,0 +1,43 @@
+@import '~vue-tel-input/dist/vue-tel-input.css';
+.vue-tel-input{background-image:none;border:1px solid #d8d8d8;border-radius:1px;color:inherit;transition:border-color .15s ease-in-out 0s,box-shadow .15s ease-in-out 0s}.vue-tel-input.is-invalid{background-image:none;border:1px solid #dc3545}
+.form-conectati{
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid #e0e4e7!important;
+}
+.vue-tel-input:focus-within{
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255, 0)!important;
+}
+.vue-tel-input{
+  padding: 5px 0;
+}
+.form-conectati .multiselect__select{
+  display: none;
+}
+.form-conectati .multiselect__tags{
+  border-radius: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.form-conectati .multiselect__tags-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+}
+
+::-webkit-input-placeholder,.multiselect__placeholder,.vti__input {
+  font-size: 13px!important;
+  color: #a7afb7!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 13px!important;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+  font-size: 13px!important;
+}

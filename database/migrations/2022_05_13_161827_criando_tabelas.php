@@ -60,6 +60,31 @@ class CriandoTabelas extends Migration
             $table->string("nif");
             $table->timestamps();
         });
+        Schema::create('tag', function (Blueprint $table) {
+            $table->id();
+            $table->string("nome");
+            $table->bigInteger('tenant_id')->nullable()->unsigned();
+            $table->index('tenant_id');
+            $table->timestamps();
+        });
+        Schema::create('contact', function (Blueprint $table) {
+            $table->id();
+            $table->string("name");
+            $table->string("number");
+            $table->bigInteger('tenant_id')->nullable()->unsigned();
+            $table->index('tenant_id');
+            $table->timestamps();
+        });
+        Schema::create('tag_in_contact', function (Blueprint $table) {
+            $table->id();
+            $table->bigInteger('tenant_id')->nullable()->unsigned();
+            $table->index('tenant_id');
+            $table->bigInteger('contact_id')->nullable()->unsigned();
+            $table->index('contact_id');
+            $table->bigInteger('tag_id')->nullable()->unsigned();
+            $table->index('tag_id');
+            $table->timestamps();
+        });
     }
 
     /**

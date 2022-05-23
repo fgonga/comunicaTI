@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/OneDrive/Ambiente de Trabalho/BIT/www/cargax/.idea/cargax.iml" filepath="$USER_HOME$/OneDrive/Ambiente de Trabalho/BIT/www/cargax/.idea/cargax.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/comunicaTI.iml" filepath="$PROJECT_DIR$/.idea/comunicaTI.iml" />
+      <module fileurl="file://$USER_HOME$/OneDrive/Ambiente de Trabalho/Datalog/www/datagest/.idea/datagest.iml" filepath="$USER_HOME$/OneDrive/Ambiente de Trabalho/Datalog/www/datagest/.idea/datagest.iml" />
     </modules>
   </component>
 </project>

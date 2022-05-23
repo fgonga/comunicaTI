@@ -26,13 +26,7 @@ class Tenant extends Model
      */
     protected $fillable = ['nome','uuid','nif'];
 
-    /**
-     * @return HasMany
-     */
-    public function users(): HasMany
-    {
-        return $this->hasMany('App\Models\User');
-    }
+
     protected static function boot()
     {
 
@@ -41,5 +35,30 @@ class Tenant extends Model
         self::creating(function ($model) {
             $model->uuid = (string) Uuid::generate(4);
         });
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function contacts(): HasMany
+    {
+        return $this->hasMany('App\Models\Contact');
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function tags(): HasMany
+    {
+        return $this->hasMany('App\Models\Tag');
+    }
+
+
+    /**
+     * @return HasMany
+     */
+    public function users(): HasMany
+    {
+        return $this->hasMany('App\Models\User');
     }
 }

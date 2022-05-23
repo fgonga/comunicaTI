@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/welcome', function () {
 //     return view('welcome');
 // });
+Route::domain('{account}.comunicati.test')->group(function () {
+    Route::get('user', function ($account, $id) {
+        //
+    });
+});
